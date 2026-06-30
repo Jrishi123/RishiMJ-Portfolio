@@ -23,9 +23,9 @@ const mono = JetBrains_Mono({
 });
 
 export const metadata = {
-  title: "Arjun Mehta — DevOps Engineer",
+  title: "Jothick Rishi — DevOps Engineer",
   description:
-    "Cinematic portfolio of Arjun Mehta, DevOps engineer and cloud infrastructure specialist.",
+    "Cinematic portfolio of Jothick Rishi, DevOps engineer and web designer.",
 };
 
 export default function RootLayout({ children }) {
