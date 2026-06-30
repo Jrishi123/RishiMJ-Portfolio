@@ -240,7 +240,6 @@ export default function VideoIntro({
           className={styles.fgVideo}
           src={VIDEO_SRC}
           autoPlay
-          loop
           muted={isMuted}
           defaultMuted
           playsInline
@@ -248,6 +247,10 @@ export default function VideoIntro({
           onCanPlay={playVideos}
           onPlaying={() => setIsPlaying(true)}
           onPause={() => setIsPlaying(false)}
+          onEnded={() => {
+            setIsPlaying(false);
+            scrollToNext();
+          }}
         />
       </div>
 
