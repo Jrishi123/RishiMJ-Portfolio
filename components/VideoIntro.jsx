@@ -10,7 +10,7 @@ const CinematicLayer = dynamic(() => import("./CinematicLayer"), {
   ssr: false,
 });
 
-const VIDEO_SRC = "public/videos/hero-talking.mp4";
+const VIDEO_SRC = "/videos/hero-talking.mp4";
 
 export default function VideoIntro({
   firstName = "Jothick",
@@ -40,6 +40,30 @@ export default function VideoIntro({
   const [showSoundHint, setShowSoundHint] = useState(false);
   const [hintVisibleClass, setHintVisibleClass] = useState("");
   const [revealed, setRevealed] = useState(false);
+
+  const playVideos = useCallback(() => {
+    const fg = fgVideoRef.current;
+    const bg = bgVideoRef.current;
+    if (!fg) return;
+
+    fg.muted = isMuted;
+    fg.defaultMuted = true;
+    if (bg) {
+      bg.muted = true;
+      bg.defaultMuted = true;
+    }
+
+    const fgPlay = fg.play();
+    bg?.play();
+
+    if (fgPlay && typeof fgPlay.then === "function") {
+      fgPlay
+        .then(() => setIsPlaying(true))
+        .catch(() => setIsPlaying(false));
+    } else {
+      setIsPlaying(true);
+    }
+  }, [isMuted]);
 
   // ---- Entrance animation ------------------------------------------------
   useEffect(() => {
@@ -116,9 +140,15 @@ export default function VideoIntro({
     const bg = bgVideoRef.current;
     if (!fg) return;
     if (fg.paused) {
-      fg.play();
+      const fgPlay = fg.play();
       bg?.play();
-      setIsPlaying(true);
+      if (fgPlay && typeof fgPlay.then === "function") {
+        fgPlay
+          .then(() => setIsPlaying(true))
+          .catch(() => setIsPlaying(false));
+      } else {
+        setIsPlaying(true);
+      }
     } else {
       fg.pause();
       bg?.pause();
@@ -161,6 +191,10 @@ export default function VideoIntro({
     return () => fg.removeEventListener("timeupdate", sync);
   }, []);
 
+  useEffect(() => {
+    playVideos();
+  }, [playVideos]);
+
   return (
     <section ref={sectionRef} className={styles.hero} aria-label="Intro">
       {/* Ambient blurred background video */}
@@ -172,6 +206,7 @@ export default function VideoIntro({
           autoPlay
           loop
           muted
+          defaultMuted
           playsInline
           preload="auto"
         />
@@ -192,8 +227,12 @@ export default function VideoIntro({
           autoPlay
           loop
           muted={isMuted}
+          defaultMuted
           playsInline
           preload="auto"
+          onCanPlay={playVideos}
+          onPlaying={() => setIsPlaying(true)}
+          onPause={() => setIsPlaying(false)}
         />
       </div>
 
