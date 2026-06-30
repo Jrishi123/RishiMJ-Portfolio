@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" role="img" aria-label="Football club website preview">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#061510"/>
+      <stop offset="0.48" stop-color="#0f5f40"/>
+      <stop offset="1" stop-color="#d8f3dc"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="750" fill="url(#bg)"/>
+  <rect x="130" y="120" width="940" height="510" rx="28" fill="#07100d" opacity="0.54" stroke="#eaffef" stroke-opacity="0.28"/>
+  <circle cx="600" cy="375" r="168" fill="none" stroke="#eaffef" stroke-width="10" opacity="0.48"/>
+  <path d="M130 375h940M600 120v510" stroke="#eaffef" stroke-width="8" opacity="0.36"/>
+  <circle cx="600" cy="375" r="86" fill="#eaffef" opacity="0.95"/>
+  <path d="M600 300l68 50-26 80h-84l-26-80z" fill="#0b3d2a"/>
+  <text x="600" y="615" text-anchor="middle" font-family="Arial Black, Arial, sans-serif" font-size="72" fill="#f4fff5">CBFC</text>
+  <text x="600" y="666" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" letter-spacing="7" fill="#f4fff5" opacity="0.76">OFFICIAL CLUB WEBSITE</text>
+</svg>

@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" role="img" aria-label="Wedding invitation website preview">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#2b1117"/>
+      <stop offset="0.52" stop-color="#7e303a"/>
+      <stop offset="1" stop-color="#f1c9a8"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="38%" r="55%">
+      <stop offset="0" stop-color="#fff6ea" stop-opacity="0.92"/>
+      <stop offset="1" stop-color="#fff6ea" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="750" fill="url(#bg)"/>
+  <circle cx="600" cy="280" r="270" fill="url(#glow)"/>
+  <path d="M280 560c130-110 225-110 320 0 95-110 190-110 320 0" fill="none" stroke="#fff0df" stroke-width="16" stroke-linecap="round" opacity="0.74"/>
+  <text x="600" y="270" text-anchor="middle" font-family="Georgia, serif" font-size="78" fill="#fff6ea">Bawish</text>
+  <text x="600" y="345" text-anchor="middle" font-family="Georgia, serif" font-size="34" fill="#ffe1c4">weds</text>
+  <text x="600" y="430" text-anchor="middle" font-family="Georgia, serif" font-size="78" fill="#fff6ea">Maha</text>
+  <text x="600" y="620" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" letter-spacing="8" fill="#fff6ea" opacity="0.75">WEDDING INVITATION</text>
+</svg>

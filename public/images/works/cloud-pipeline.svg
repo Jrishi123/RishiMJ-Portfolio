@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" role="img" aria-label="Cloud deployment pipeline preview">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#071019"/>
+      <stop offset="0.58" stop-color="#12354d"/>
+      <stop offset="1" stop-color="#ffb066"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="750" fill="url(#bg)"/>
+  <g fill="none" stroke="#fff1e4" stroke-width="10" opacity="0.78">
+    <path d="M180 384h175M480 384h175M780 384h175" stroke-linecap="round"/>
+    <path d="M340 352l34 32-34 32M640 352l34 32-34 32M940 352l34 32-34 32" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <g fill="#081018" stroke="#fff1e4" stroke-opacity="0.28">
+    <rect x="110" y="280" width="170" height="208" rx="22"/>
+    <rect x="410" y="280" width="170" height="208" rx="22"/>
+    <rect x="710" y="280" width="170" height="208" rx="22"/>
+    <rect x="1010" y="280" width="80" height="208" rx="22"/>
+  </g>
+  <text x="195" y="400" text-anchor="middle" font-family="Arial Black, Arial, sans-serif" font-size="34" fill="#fff6ea">BUILD</text>
+  <text x="495" y="400" text-anchor="middle" font-family="Arial Black, Arial, sans-serif" font-size="34" fill="#fff6ea">TEST</text>
+  <text x="795" y="400" text-anchor="middle" font-family="Arial Black, Arial, sans-serif" font-size="34" fill="#fff6ea">SHIP</text>
+  <text x="600" y="190" text-anchor="middle" font-family="Georgia, serif" font-size="72" fill="#fff6ea">Cloud Deployment Pipeline</text>
+  <text x="600" y="590" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" letter-spacing="7" fill="#ffd2aa">CI/CD · DOCKER · AWS</text>
+</svg>

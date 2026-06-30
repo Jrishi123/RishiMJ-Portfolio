@@ -59,7 +59,7 @@
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 18px;
 }
 
@@ -86,7 +86,7 @@
 }
 
 .workCard {
-  min-height: 330px;
+  min-height: 520px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -102,6 +102,37 @@
 
 .workCard:nth-child(3) {
   animation-delay: 0.16s;
+}
+
+.workCard:nth-child(4) {
+  animation-delay: 0.24s;
+}
+
+.workCard:nth-child(5) {
+  animation-delay: 0.32s;
+}
+
+.workCard:nth-child(6) {
+  animation-delay: 0.4s;
+}
+
+.workImageWrap {
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.workImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.workCard:hover .workImage {
+  transform: scale(1.04);
 }
 
 .meta {
@@ -223,6 +254,23 @@
 .button:hover {
   transform: translateY(-2px);
   background: #ffc48c;
+}
+
+.textLink {
+  width: fit-content;
+  color: rgba(255, 196, 140, 0.92);
+  font-family: var(--font-mono, "JetBrains Mono", monospace);
+  font-size: 12px;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255, 196, 140, 0.42);
+  padding-bottom: 5px;
+  transition: color 0.25s ease, border-color 0.25s ease;
+}
+
+.textLink:hover {
+  color: #fff4e8;
+  border-color: #fff4e8;
 }
 
 @keyframes rise {

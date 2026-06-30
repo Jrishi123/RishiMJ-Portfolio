@@ -16,8 +16,8 @@ export default function WorksPage() {
           <p className={styles.eyebrow}>Selected works</p>
           <h1 className={styles.title}>Projects built for speed, clarity, and reliability.</h1>
           <p className={styles.lead}>
-            A focused view of infrastructure, automation, and web experience
-            work. Replace these entries with live projects as your portfolio grows.
+            Web design work with live links, plus cloud engineering projects that
+            show your DevOps direction.
           </p>
         </div>
       </section>
@@ -26,6 +26,9 @@ export default function WorksPage() {
         <div className={styles.grid}>
           {works.map((work) => (
             <article key={work.title} className={styles.workCard}>
+              <div className={styles.workImageWrap}>
+                <img className={styles.workImage} src={work.image} alt={`${work.title} preview`} />
+              </div>
               <div>
                 <div className={styles.meta}>
                   <span>{work.type}</span>
@@ -41,6 +44,11 @@ export default function WorksPage() {
                   </span>
                 ))}
               </div>
+              {work.link && (
+                <a className={styles.textLink} href={work.link} target="_blank" rel="noreferrer">
+                  Open project
+                </a>
+              )}
             </article>
           ))}
         </div>

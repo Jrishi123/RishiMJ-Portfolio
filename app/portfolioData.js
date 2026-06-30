@@ -33,12 +33,53 @@ export const skills = [
 
 export const works = [
   {
+    title: "Bawish Weds Maha",
+    type: "Web Design",
+    year: "2026",
+    description:
+      "A romantic wedding invitation website with an elegant event flow, visual storytelling, and guest-friendly details.",
+    stack: ["Wedding Site", "Responsive Design", "Netlify"],
+    link: "https://bawishwedsmaha.netlify.app/",
+    image: "/images/works/bawish-weds-maha.png",
+  },
+  {
+    title: "CBFC Official",
+    type: "Web Design",
+    year: "2026",
+    description:
+      "A football club website designed around team identity, fixtures, updates, and a confident sports presentation.",
+    stack: ["Club Website", "Sports UI", "Netlify"],
+    link: "https://cbfcofficial.netlify.app/",
+    image: "/images/works/cbfc-official.png",
+  },
+  {
+    title: "Miracle OF Motors",
+    type: "Web Design",
+    year: "2026",
+    description:
+      "A bike motors website with strong product energy, showroom-style sections, and a clean browsing experience.",
+    stack: ["Motors Website", "Product UI", "Netlify"],
+    link: "https://miracleof.netlify.app/",
+    image: "/images/works/miracle-of.png",
+  },
+  {
+    title: "Cinematic Portfolio",
+    type: "Web Design",
+    year: "2026",
+    description:
+      "A premium personal portfolio experience using video, Three.js particles, smooth motion, and responsive design.",
+    stack: ["Next.js", "GSAP", "Three.js", "Vercel"],
+    link: "https://mj-portfolio-teal.vercel.app/",
+    image: "/images/works/cinematic-portfolio.png",
+  },
+  {
     title: "Cloud Deployment Pipeline",
     type: "DevOps System",
     year: "2026",
     description:
       "A repeatable release pipeline with automated build, test, container image publishing, and environment-aware deployment steps.",
     stack: ["GitHub Actions", "Docker", "AWS", "Shell"],
+    image: "/images/works/cloud-pipeline.svg",
   },
   {
     title: "Kubernetes Reliability Layer",
@@ -47,14 +88,7 @@ export const works = [
     description:
       "Cluster-ready deployment patterns for workloads, health checks, resource requests, rollout safety, and service visibility.",
     stack: ["Kubernetes", "Helm", "Prometheus", "Grafana"],
-  },
-  {
-    title: "Cinematic Portfolio",
-    type: "Web Experience",
-    year: "2025",
-    description:
-      "A premium personal portfolio experience using video, Three.js particles, smooth motion, and responsive design.",
-    stack: ["Next.js", "GSAP", "Three.js", "CSS Modules"],
+    image: "/images/works/kubernetes-reliability.svg",
   },
 ];
 

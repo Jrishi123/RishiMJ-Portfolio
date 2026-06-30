@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" role="img" aria-label="Bike motors website preview">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#08090b"/>
+      <stop offset="0.58" stop-color="#263242"/>
+      <stop offset="1" stop-color="#ff9c52"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="750" fill="url(#bg)"/>
+  <path d="M195 480h810" stroke="#fff1e4" stroke-width="8" stroke-linecap="round" opacity="0.28"/>
+  <circle cx="350" cy="495" r="92" fill="none" stroke="#fff1e4" stroke-width="22"/>
+  <circle cx="850" cy="495" r="92" fill="none" stroke="#fff1e4" stroke-width="22"/>
+  <path d="M350 495l130-170h165l205 170M480 325l-70 170M645 325l-120 170h325" fill="none" stroke="#fff1e4" stroke-width="22" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M650 325h130l66-58" fill="none" stroke="#ffbd84" stroke-width="18" stroke-linecap="round"/>
+  <text x="600" y="188" text-anchor="middle" font-family="Arial Black, Arial, sans-serif" font-size="74" fill="#fff6ea">MIRACLE OF</text>
+  <text x="600" y="254" text-anchor="middle" font-family="Arial, sans-serif" font-size="30" letter-spacing="8" fill="#ffcfab">BIKE MOTORS</text>
+</svg>
