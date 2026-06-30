@@ -10,7 +10,7 @@ const CinematicLayer = dynamic(() => import("./CinematicLayer"), {
   ssr: false,
 });
 
-const VIDEO_SRC = "/videos/hero-talking.mp4";
+const VIDEO_SRC = "public/videos/hero-talking.mp4";
 
 export default function VideoIntro({
   firstName = "Jothick",

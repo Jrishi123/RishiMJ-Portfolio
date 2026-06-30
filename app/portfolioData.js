@@ -4,8 +4,8 @@ export const profile = {
   fullName: "Jothick Rishi",
   role: "DevOps Engineer & Web Designer",
   github: "https://github.com/Jrishi123",
-  email: "hello@jothickrishi.dev",
-  location: "India",
+  email: "jothickrishi2717@gmail.com",
+  location: "Coimbatore",
   summary:
     "I build calm, reliable digital systems: cloud infrastructure, deployment pipelines, observability, and polished frontend experiences that help teams ship with confidence.",
 };
