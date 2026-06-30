@@ -9,7 +9,10 @@ export const metadata = {
 
 export default function WorksPage() {
   return (
-    <main className={styles.page}>
+    <main
+      className={styles.page}
+      style={{ "--page-image": "url('/images/works/cbfc-official.png')" }}
+    >
       <SiteHeader />
       <section className={styles.hero}>
         <div>

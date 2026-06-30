@@ -1,4 +1,5 @@
 .page {
+  position: relative;
   min-height: 100vh;
   background:
     linear-gradient(180deg, rgba(7, 8, 10, 0.92), rgba(12, 11, 10, 0.98)),
@@ -7,14 +8,54 @@
     #07080a;
   color: #f4ece0;
   overflow: hidden;
+  animation: pageIn 0.7s ease both;
+}
+
+.page::before {
+  content: "";
+  position: fixed;
+  inset: -6%;
+  z-index: 0;
+  pointer-events: none;
+  background-image:
+    linear-gradient(90deg, rgba(7, 8, 10, 0.96), rgba(7, 8, 10, 0.62) 48%, rgba(7, 8, 10, 0.94)),
+    var(--page-image);
+  background-position: center;
+  background-size: cover;
+  filter: saturate(0.9) contrast(1.08);
+  opacity: 0.28;
+  transform: scale(1.04);
+  animation: backgroundDrift 18s ease-in-out infinite alternate;
+}
+
+.page::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(115deg, transparent 0%, rgba(255, 196, 140, 0.09) 34%, transparent 58%),
+    radial-gradient(circle at 18% 26%, rgba(255, 150, 70, 0.18), transparent 32%),
+    radial-gradient(circle at 82% 18%, rgba(110, 160, 255, 0.16), transparent 30%);
+  mix-blend-mode: screen;
+  opacity: 0.82;
+  animation: lightSweep 9s ease-in-out infinite alternate;
 }
 
 .hero {
+  z-index: 1;
   min-height: 72vh;
   display: grid;
   align-items: end;
   padding: 140px clamp(20px, 7vw, 96px) 72px;
   position: relative;
+}
+
+.hero > div,
+.section {
+  position: relative;
+  z-index: 1;
 }
 
 .hero::before {
@@ -55,252 +96,5 @@
 
 .section {
   padding: 36px clamp(20px, 7vw, 96px) 96px;
-}
-
-.grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 18px;
-}
-
-.twoColumn {
-  display: grid;
-  grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
-  gap: clamp(24px, 6vw, 72px);
-  align-items: start;
-}
-
-.panel,
-.workCard,
-.timelineItem {
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  background: rgba(20, 18, 16, 0.42);
-  backdrop-filter: blur(18px) saturate(140%);
-  -webkit-backdrop-filter: blur(18px) saturate(140%);
-  box-shadow: 0 28px 90px rgba(0, 0, 0, 0.26);
-}
-
-.panel {
-  padding: clamp(22px, 3vw, 34px);
-  border-radius: 8px;
-}
-
-.workCard {
-  min-height: 520px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  gap: 28px;
-  padding: 24px;
-  border-radius: 8px;
-  animation: rise 0.8s cubic-bezier(0.16, 1, 0.3, 1) both;
-}
-
-.workCard:nth-child(2) {
-  animation-delay: 0.08s;
-}
-
-.workCard:nth-child(3) {
-  animation-delay: 0.16s;
-}
-
-.workCard:nth-child(4) {
-  animation-delay: 0.24s;
-}
-
-.workCard:nth-child(5) {
-  animation-delay: 0.32s;
-}
-
-.workCard:nth-child(6) {
-  animation-delay: 0.4s;
-}
-
-.workImageWrap {
-  aspect-ratio: 16 / 10;
-  overflow: hidden;
-  border-radius: 8px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  background: rgba(255, 255, 255, 0.04);
-}
-
-.workImage {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.workCard:hover .workImage {
-  transform: scale(1.04);
-}
-
-.meta {
-  display: flex;
-  justify-content: space-between;
-  gap: 16px;
-  color: rgba(255, 196, 140, 0.82);
-  font-family: var(--font-mono, "JetBrains Mono", monospace);
-  font-size: 12px;
-  text-transform: uppercase;
-}
-
-.cardTitle {
-  font-family: var(--font-display, "Fraunces", serif);
-  font-size: clamp(26px, 3vw, 40px);
-  font-weight: 600;
-  line-height: 1.05;
-  margin-bottom: 16px;
-}
-
-.bodyText,
-.list,
-.timelineBody {
-  color: rgba(244, 236, 224, 0.72);
-  font-size: 16px;
-  line-height: 1.75;
-}
-
-.chipRow {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-}
-
-.chip {
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  border-radius: 999px;
-  color: rgba(244, 236, 224, 0.78);
-  font-family: var(--font-mono, "JetBrains Mono", monospace);
-  font-size: 12px;
-  padding: 8px 10px;
-  background: rgba(255, 255, 255, 0.04);
-}
-
-.sectionTitle {
-  font-family: var(--font-display, "Fraunces", serif);
-  font-size: clamp(28px, 4vw, 54px);
-  font-weight: 600;
-  margin-bottom: 22px;
-}
-
-.list {
-  display: grid;
-  gap: 16px;
-  list-style: none;
-}
-
-.list li {
-  padding-left: 18px;
-  position: relative;
-}
-
-.list li::before {
-  content: "";
-  position: absolute;
-  top: 13px;
-  left: 0;
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background: #ff9c52;
-}
-
-.timeline {
-  display: grid;
-  gap: 14px;
-}
-
-.timelineItem {
-  display: grid;
-  grid-template-columns: 120px minmax(0, 1fr);
-  gap: 24px;
-  padding: 24px;
-  border-radius: 8px;
-  animation: fade 0.9s ease both;
-}
-
-.timelineLabel {
-  color: rgba(255, 196, 140, 0.88);
-  font-family: var(--font-mono, "JetBrains Mono", monospace);
-  font-size: 12px;
-  text-transform: uppercase;
-}
-
-.timelineTitle {
-  font-family: var(--font-display, "Fraunces", serif);
-  font-size: 26px;
-  font-weight: 600;
-  margin-bottom: 8px;
-}
-
-.buttonRow {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-  margin-top: 28px;
-}
-
-.button {
-  color: #0c0b0a;
-  background: #f4ece0;
-  border-radius: 999px;
-  padding: 12px 16px;
-  font-weight: 700;
-  text-decoration: none;
-  transition: transform 0.25s ease, background 0.25s ease;
-}
-
-.button:hover {
-  transform: translateY(-2px);
-  background: #ffc48c;
-}
-
-.textLink {
-  width: fit-content;
-  color: rgba(255, 196, 140, 0.92);
-  font-family: var(--font-mono, "JetBrains Mono", monospace);
-  font-size: 12px;
-  text-transform: uppercase;
-  text-decoration: none;
-  border-bottom: 1px solid rgba(255, 196, 140, 0.42);
-  padding-bottom: 5px;
-  transition: color 0.25s ease, border-color 0.25s ease;
-}
-
-.textLink:hover {
-  color: #fff4e8;
-  border-color: #fff4e8;
-}
-
-@keyframes rise {
-  from {
-    opacity: 0;
-    transform: translateY(26px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes fade {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@media (max-width: 900px) {
-  .grid,
-  .twoColumn {
-    grid-template-columns: 1fr;
-  }
-
-  .timelineItem {
-    grid-template-columns: 1fr;
-    gap: 10px;
-  }
+  animation: sectionFloat 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.12s both;
 }

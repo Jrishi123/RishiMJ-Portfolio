@@ -9,7 +9,10 @@ export const metadata = {
 
 export default function CareerPage() {
   return (
-    <main className={styles.page}>
+    <main
+      className={styles.page}
+      style={{ "--page-image": "url('/images/works/cloud-pipeline.svg')" }}
+    >
       <SiteHeader />
       <section className={styles.hero}>
         <div>
